@@ -1,0 +1,72 @@
+$pink:	  	#ff69b4 !default;
+$ciscoblue:	#017cad !default;
+$violet: 	#6B5B95 !default;
+$lime:		#BFD641 !default;
+$orange:	#E47A2E !default;
+
+$color-variants: (
+    100:  -10%,
+    200:  -25%,
+    300:  -50%,
+    400:  -75%,
+    500:  100%,
+    600:   75%,
+    700:   50%,
+    800:   25%,
+    900:   15%
+);
+
+$colors: map-merge((
+  "pink":       $pink,
+  "ciscoblue1":	$ciscoblue,
+  "violet":		$violet,
+  "lime":		$lime,
+  "purple":		$purple,
+  "orange":		$orange,
+), $colors);
+
+$hotpink:		$pink !default;	
+$ciscoblue1:	$ciscoblue !default;
+$violet1:		$violet !default;
+$lime1:			$lime !default;
+$orange1:		$orange !default;
+
+$theme-colors: map-merge((
+  "pink":		$hotpink,
+  "ciscoblue1": $ciscoblue1,
+  "violet":		$violet1,
+  "lime":		$lime1,
+  "purple":		$purple,
+  "orange":		$orange1,
+), $theme-colors);
+
+/*
+@each $color-name, $color in $colors {    
+    @each $variant-name, $percent in $color-variants {  
+        $mix-color: if($percent < 0%, white, black); 
+        $colors: map-merge(($color-name+'-'+$variant-name: mix($color, $mix-color, abs($percent))), $colors);
+        $theme-colors: map-merge(($color-name+'-'+$variant-name: mix($color, $mix-color, abs($percent))), $theme-colors);
+    }
+}
+*/
+
+$facebook:    #3b579d !default;
+$linkedin:	  #0077b5 !default;
+$twitter:	  #2caae1 !default;
+$youtube:	  #e52c26 !default;
+$google:	  #dc4b39 !default;
+$yahoo:	      #420297 !default;
+
+.bg-facebook{background-color:$facebook !important}
+.bg-linkedin{background-color:$linkedin !important}
+.bg-twitter{background-color:$twitter !important}
+.bg-youtube{background-color:$youtube !important}
+.bg-google{background-color:$google !important}
+.bg-yahoo{background-color:$yahoo !important}
+
+.text-facebook{color:$facebook !important}
+.text-linkedin{color:$linkedin !important}
+.text-twitter{color:$twitter !important}
+.text-youtube{color:$youtube !important}
+.text-google{background-color:$google !important}
+.text-yahoo{background-color:$yahoo !important}
